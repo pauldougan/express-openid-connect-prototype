@@ -66,10 +66,28 @@ The technical documentation explains [how to aquire the RSA Public Key of the Cr
 > For help configuring your app for identity proving please contact the GOV.UK One Login onboarding team via:
 > [`#govuk-one-login`](https://ukgovernmentdigital.slack.com/archives/C02AQUJ6WTC) channel on cross government Slack or [the support form](https://www.sign-in.service.gov.uk/contact-us), explain that you need help configuring a client using the `https://github.com/govuk-one-login/express-openid-connect-prototype` prototype in the 'how can we help' field.)
 
+## Installing Node.js and prerequisites
+
+assumes you are using a Mac
+
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+install macOS package installer
+
+    brew install nvm
+
+install node version manager
+
+    nvm install 20.11.0
+
+install the latest LTS version
+
+
 ## Running locally
 
-The GOV.UK One Login integration environment supports `localhost` as a Relying Party.  When registering your prototype, ensure you set the Redirect URI to `http://localhost:3000/callback`.  Then, to start your prototype:
+The GOV.UK One Login integration environment supports `localhost` as a Relying Party. When registering your prototype, ensure you set the Redirect URI to `http://localhost:3000/callback`.  Then, to start your prototype:
 
+    nvm use 20.11.0
     npm install
     npm run dev
 
